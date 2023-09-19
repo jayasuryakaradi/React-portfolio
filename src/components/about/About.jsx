@@ -1,46 +1,49 @@
 import React from "react";
-import './about.css'
+import "./about.css";
+
+const Card = ({ imageUrl, imageAlt, title, description1, description2 }) => {
+  return (
+    <div className="details-container">
+      <img src={imageUrl} alt={imageAlt} className="icon" />
+      <h3>{title}</h3>
+      <p>
+        {description1} <br />
+        {description2}
+      </p>
+    </div>
+  );
+};
 const About = () => {
   return (
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
+      <p className="section__text__p1">Get To Know More</p>
+      <h1 className="title">About Me</h1>
+      <div className="section-container">
+        <div className="section__pic-container">
           <img
             src="./assets/about-pic.JPEG"
             alt="Profile picture"
-            class="about-pic"
+            className="about-pic"
           />
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>
-                1.5+ years <br />
-                Quality Engineer
-              </p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>
-                Bachelor of Engineering
-                <br />
-              </p>
-            </div>
+        <div className="about-details-container">
+          <div className="about-containers">
+            <Card
+              imageUrl={"./assets/experience.png"}
+              imageAlt={"Experience icon"}
+              title={"Experience"}
+              description1={"1.5+ years"}
+              description2={"Quality Engineer"}
+            />
+            <Card
+              imageUrl={"./assets/education.png"}
+              imageAlt={"Education icon"}
+              title={"Education"}
+              description1={" Bachelor of Engineering"}
+              description2={""}
+            />
           </div>
-          <div class="text-container">
+          <div className="text-container">
             <p>
               An enthusiastic and knowledgeable Engineer looking forward to
               change the working role from quality engineer to front end
@@ -53,11 +56,8 @@ const About = () => {
           </div>
         </div>
       </div>
-      <a href='#experience'><img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-      />
+      <a href="#experience">
+        <img src="./assets/arrow.png" alt="Arrow icon" className="icon arrow" />
       </a>
     </section>
   );
