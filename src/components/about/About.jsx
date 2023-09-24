@@ -1,9 +1,9 @@
 import React from "react";
-import "./about.css";
+import "./About.css";
 
 const Card = ({ imageUrl, imageAlt, title, description1, description2 }) => {
   return (
-    <div className="details-container">
+    <div className="card-container border-rounded">
       <img src={imageUrl} alt={imageAlt} className="icon" />
       <h3>{title}</h3>
       <p>
@@ -15,19 +15,19 @@ const Card = ({ imageUrl, imageAlt, title, description1, description2 }) => {
 };
 const About = () => {
   return (
-    <section id="about">
-      <p className="section__text__p1">Get To Know More</p>
-      <h1 className="title">About Me</h1>
-      <div className="section-container">
-        <div className="section__pic-container">
-          <img
-            src="./assets/about-pic.JPEG"
-            alt="Profile picture"
-            className="about-pic"
-          />
-        </div>
-        <div className="about-details-container">
-          <div className="about-containers">
+    <div className="about__container">
+      <div className="heading">
+        <p>Get To Know More</p>
+        <h1>About Me</h1>
+      </div>
+      <div className="flex-wrap-justify-center-align-center">
+        <img
+          src="./assets/about-pic.jpg"
+          alt="about-pic"
+          className="about-pic"
+        />
+        <div className="flex-col-wrap-justify-center-align-center">
+          <div className="flex-wrap-justify-center-align-center">
             <Card
               imageUrl={"./assets/experience.png"}
               imageAlt={"Experience icon"}
@@ -56,10 +56,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <a href="#experience">
-        <img src="./assets/arrow.png" alt="Arrow icon" className="icon arrow" />
-      </a>
-    </section>
+    </div>
   );
 };
 

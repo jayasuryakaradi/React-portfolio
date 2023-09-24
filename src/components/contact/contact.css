@@ -1,0 +1,25 @@
+.contact__container{
+  margin: 2rem 0;
+  }
+.contact-info-upper-container {
+
+  margin: 0 14rem;
+  padding: 5rem;
+}
+.contact-info-upper-container a {
+  text-decoration: none;
+  color: black;
+}
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 10rem;
+}
+@media screen and (max-width: 700px) {
+  .contact-info-upper-container {
+    margin: 1.5rem;
+  }
+}

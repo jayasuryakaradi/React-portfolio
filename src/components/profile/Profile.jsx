@@ -1,26 +1,30 @@
 import React from "react";
-import "./profile.css";
+import "./Profile.css";
 const Profile = () => {
   return (
-    <section id="profile">
-      <div className="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+    <div className="profile__container flex-wrap-justify-center-align-center">
+      <div className="profile__image-container">
+        <img
+          src="./assets/profile-pic.png"
+          alt=""
+          className="profile__profile-pic "
+        />
       </div>
-      <div className="section__text">
-        <p className="section__text__p1">Hello, I'm</p>
-        <h1 className="title">Jayasurya Karadi</h1>
-        <p className="section__text__p2">React Web Developer | Quality Engineer</p>
-        <div className="btn-container">
+      <div className="profile__details-container">
+        <p>Hello, I'm</p>
+        <h1>Jayasurya Karadi</h1>
+        <strong>React Web Developer | Quality Engineer</strong>
+        <div className="flex-wrap-justify-center-align-center profile__btn-container">
           <a
             target="_blank"
             href="https://drive.google.com/file/d/12Wp4VMfpRJ2Ndd-HcgzL0UMG8nKNkidb/view?usp=sharing"
+            className="btn-1"
           >
-            <button className="btn btn-color-2">Download CV</button>
+            Download CV
           </a>
-          <a href="#contact"><button className="btn btn-color-1">Contact Info</button></a>
+          <a className="btn-2">Contact Info</a>
         </div>
-        <div id="socials-container">
-          
+        <div className="profile__icons-container flex-wrap-justify-center-align-center">
           <a target="_blank" href="https://github.com/jayasuryakaradi">
             <img
               src="./assets/github.png"
@@ -37,7 +41,8 @@ const Profile = () => {
           </a>
         </div>
       </div>
-    </section>
+      
+    </div>
   );
 };
 

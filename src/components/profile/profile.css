@@ -1,6 +1,37 @@
-#profile {
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    height: 80vh;
+.profile__container {
+  gap: 3rem;
+  margin: 5rem 0;
+}
+.profile__profile-pic {
+  width: 23rem;
+  height: 23rem;
+}
+
+.profile__details-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.profile__details-container h1 {
+  font-size: 48px;
+}
+.profile__details-container strong {
+  font-size: 16px;
+  color: grey;
+}
+
+.profile__btn-container {
+  gap: 1rem;
+}
+.profile__icons-container {
+  
+  gap: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .profile__profile-pic {
+    width: 20rem;
+    height: 20rem;
   }
+}

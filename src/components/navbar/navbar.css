@@ -2,17 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:20px 80px;
-    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.1);
-    
-  
-
-   
+    padding:15px 80px;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.1);   
 }
 .portfolio-nav__logo a{
     text-decoration: none;
-    color:black;
-    
+    color:black;  
 }
 #navbar{
     display: flex;
@@ -24,39 +19,37 @@
 #navbar li{
     list-style: none;
     position: relative;
-    
-
 }
 #navbar li a{
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 300;
     color:black;
-
-  
 }
 #navbar li a:hover,
 #navbar li a.active{
     color:grey;
 }
+
 #navbar li a:hover::after,
 #navbar li a.active::after{
     content: "";
     width: 50%;
     height: 2px;
-    background: grey;
+    background: rgb(95, 94, 94);
     position: absolute;
     bottom: -4px;
     left:0px;
 }
+
 .portfolio-nav__mobile{
     display: none;
 }
+
 .scale-up-ver-top {
 	-webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
-
 
  @-webkit-keyframes scale-up-ver-top {
     0% {
@@ -87,15 +80,11 @@
     }
   }
 
-
-
-
-
-
-
-
-  
-@media screen and (max-width:650px){
+@media screen and (max-width:700px){
+    .portfolio-nav{
+        justify-content: space-between;
+        padding:15px 20px;
+    }
     #navbar{
         display: flex;
         flex-direction: column;
@@ -105,12 +94,9 @@
         position: fixed;
         top:80px;
         right:-400px;
-        background-color: rgb(230, 228, 228);
+        background-color: rgb(249, 247, 247);
         padding: 20px;
         box-shadow: 0 5px 15px rgb(0, 0, 0, 0.2);
-
-
-        
     }
     #navbar.active{
         right:20px;
