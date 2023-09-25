@@ -2,9 +2,19 @@
   min-width: 21rem;
   text-align: center;
 }
+.disabled {
+  cursor: not-allowed;
+  padding: 30px 0;
+}
+.project-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .project-title {
   max-width: 22rem;
   padding: 0 15px;
+  padding-top: 5px;
 }
 .title {
   font-size: 32px;
@@ -15,7 +25,9 @@
 }
 .project-thumbnailPicture img {
   width: 20.9rem;
+  object-fit: cover;
   border-radius: 1rem 1rem 0px 0px;
+  height: 10rem;
 }
 
 .project-details {
@@ -40,8 +52,7 @@
 .projects__container {
   margin: 2rem;
 }
-@media screen and (max-width:700px){
-  .project-details{
-    
+@media screen and (max-width: 700px) {
+  .project-details {
   }
 }
